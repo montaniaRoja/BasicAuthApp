@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAuthApp.Views.EditForm"
+                          Title="Formulario Principal"             
+             Background="Bisque">
+    <VerticalStackLayout>
+        <Label 
+            Text="Edite los datos de la persona"
+            VerticalOptions="Center"
+            Margin="0,30,0,0"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Nombre"
+               x:Name="txtNombreEdit"
+               Margin="0,30,0,0"
+               WidthRequest="300"
+               TextColor="Bisque"
+               Background="Black"
+               FontAttributes="Bold"/>
+
+        <Entry Placeholder="Direccion"
+               x:Name="txtDireccionEdit"
+       Margin="0,30,0,0"
+       WidthRequest="300"
+       TextColor="Bisque"
+       Background="Black"
+       FontAttributes="Bold"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Inicio"
+                    x:Name="btnLista"
+                    Clicked="btnInicio_Clicked"
+                    Margin="30,30,0,0"
+                    BackgroundColor="Gray"
+                    WidthRequest="150"
+                    TextColor="White"/>
+            <Button Text="Guardar"
+                    x:Name="btnGuardarEdit"
+                    Clicked="btnGuardarEdit_Clicked"
+        Margin="0,30,0,0"
+        BackgroundColor="Gray"
+        WidthRequest="150"
+        TextColor="White"/>
+
+        </StackLayout>
+       
+
+    </VerticalStackLayout>
+</ContentPage>

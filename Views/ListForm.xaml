@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAuthApp.Views.ListForm"
+             Title="Lista de Personas"
+             Background="Bisque">
+
+    <VerticalStackLayout>
+        <!-- Label fuera del ScrollView -->
+        <Label 
+            Text="Lista de Personas Registradas"
+            VerticalOptions="Center"
+            Margin="0,30,0,0"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- ScrollView para la lista de personas -->
+        <ScrollView Margin="0,0,0,0" HeightRequest="450">
+            <VerticalStackLayout>
+                <CollectionView ItemsSource="{Binding Persons}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding PersonName}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Address}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Button Text="Editar" 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditCommand}" 
+                                            CommandParameter="{Binding .}" 
+                                            Background="Gray"
+                                            Margin="0,0,10,0"
+                                            WidthRequest="100"/>
+                                    <Button Text="Eliminar" 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteCommand}" 
+                                            CommandParameter="{Binding .}"
+                                            Background="Gray"
+                                            WidthRequest="100"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Botón para volver a la página principal -->
+        <Button Text="Volver a la Página Principal" 
+                x:Name="btnBack"
+                Clicked="btnBack_Clicked"
+                Background="Gray"
+                Margin="10"
+                VerticalOptions="End"/>
+    </VerticalStackLayout>
+</ContentPage>

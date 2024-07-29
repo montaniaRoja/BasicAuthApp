@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAuthApp.Views.MainForm"
+             Title="Formulario Principal"             
+             Background="Bisque">
+    <VerticalStackLayout>
+        <Label 
+            Text="Ingrese los datos de la persona"
+            VerticalOptions="Center"
+            Margin="0,30,0,0"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Nombre"
+               x:Name="txtNombre"
+               Margin="0,30,0,0"
+               WidthRequest="300"
+               TextColor="Bisque"
+               Background="Black"
+               FontAttributes="Bold"/>
+
+        <Entry Placeholder="Direccion"
+               x:Name="txtDireccion"
+       Margin="0,30,0,0"
+       WidthRequest="300"
+       TextColor="Bisque"
+       Background="Black"
+       FontAttributes="Bold"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Lista"
+                    x:Name="btnLista"
+                    Clicked="btnLista_Clicked"
+                    Margin="30,30,0,0"
+                    BackgroundColor="Gray"
+                    WidthRequest="150"
+                    TextColor="White"/>
+            <Button Text="Guardar"
+                    x:Name="btnGuardar"
+                    Clicked="btnGuardar_Clicked"
+        Margin="0,30,0,0"
+        BackgroundColor="Gray"
+        WidthRequest="150"
+        TextColor="White"/>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Logout"
+            x:Name="btnLogout"
+            Clicked="btnLogout_Clicked"
+Margin="100,50,0,0"
+BackgroundColor="Gray"
+WidthRequest="150"
+TextColor="White"/>
+
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
