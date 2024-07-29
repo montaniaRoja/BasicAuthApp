@@ -10,6 +10,8 @@
         <Label 
             Text="Lista de Personas Registradas"
             VerticalOptions="Center"
+            TextColor="Black"
+            FontSize="18"
             Margin="0,30,0,0"
             FontAttributes="Bold"
             HorizontalOptions="Center" />
@@ -22,8 +24,8 @@
                         <DataTemplate>
                             <StackLayout Orientation="Horizontal" Padding="10">
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding PersonName}" FontAttributes="Bold"/>
-                                    <Label Text="{Binding Address}" />
+                                    <Label Text="{Binding PersonName}" FontAttributes="Bold" TextColor="Black" FontSize="18"/>
+                                    <Label Text="{Binding Address}" TextColor="Black" FontSize="18"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                                     <Button Text="Editar" 
@@ -31,12 +33,14 @@
                                             CommandParameter="{Binding .}" 
                                             Background="Gray"
                                             Margin="0,0,10,0"
-                                            WidthRequest="100"/>
+                                            WidthRequest="100"
+                                            TextColor="Yellow"/>
                                     <Button Text="Eliminar" 
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteCommand}" 
                                             CommandParameter="{Binding .}"
                                             Background="Gray"
-                                            WidthRequest="100"/>
+                                            WidthRequest="100"
+                                            TextColor="Yellow"/>
                                 </StackLayout>
                             </StackLayout>
                         </DataTemplate>
@@ -50,6 +54,7 @@
                 x:Name="btnBack"
                 Clicked="btnBack_Clicked"
                 Background="Gray"
+                TextColor="Yellow"
                 Margin="10"
                 VerticalOptions="End"/>
     </VerticalStackLayout>

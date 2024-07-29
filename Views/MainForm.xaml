@@ -7,6 +7,8 @@
     <VerticalStackLayout>
         <Label 
             Text="Ingrese los datos de la persona"
+            TextColor="Black"
+            FontSize="18"
             VerticalOptions="Center"
             Margin="0,30,0,0"
             FontAttributes="Bold"
@@ -34,14 +36,16 @@
                     Margin="30,30,0,0"
                     BackgroundColor="Gray"
                     WidthRequest="150"
-                    TextColor="White"/>
+                    TextColor="Yellow"
+                    FontAttributes="Bold"/>
             <Button Text="Guardar"
                     x:Name="btnGuardar"
                     Clicked="btnGuardar_Clicked"
         Margin="0,30,0,0"
         BackgroundColor="Gray"
         WidthRequest="150"
-        TextColor="White"/>
+        TextColor="Yellow"
+                    FontAttributes="Bold"/>
 
         </StackLayout>
 
@@ -52,7 +56,8 @@
 Margin="100,50,0,0"
 BackgroundColor="Gray"
 WidthRequest="150"
-TextColor="White"/>
+TextColor="Yellow"
+                    FontAttributes="Bold"/>
 
         </StackLayout>
 

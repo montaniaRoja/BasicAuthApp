@@ -6,7 +6,10 @@
                 Background="Bisque">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Ingrese sus Datos de Login"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="18"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Entry Placeholder="Nombre Usuario"
@@ -31,14 +34,16 @@ FontAttributes="Bold"/>
              Margin="30,30,0,0"
              BackgroundColor="Gray"
              WidthRequest="150"
-             TextColor="White"/>
+             TextColor="Yellow"
+                    FontAttributes="Bold"/>
             <Button Text="Login"
              x:Name="btnLogin"
              Clicked="btnLogin_Clicked"
  Margin="0,30,0,0"
  BackgroundColor="Gray"
  WidthRequest="150"
- TextColor="White"/>
+ TextColor="Yellow"
+                    FontAttributes="Bold"/>
 
         </StackLayout>
     </VerticalStackLayout>
